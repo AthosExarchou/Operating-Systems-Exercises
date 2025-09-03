@@ -1,0 +1,17 @@
+#Compiled binaries
+*.out
+*.o
+*.exe
+
+#Backup / temporary files
+*~
+*.swp
+*.tmp
+
+#Build artifacts
+Exercise2/program
+BonusExercise/read
+BonusExercise/fread
+
+#System files
+Thumbs.db
