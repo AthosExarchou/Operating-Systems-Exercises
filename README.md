@@ -31,6 +31,7 @@ Operating-Systems-Exercises/
 │   ├── fread.c
 │   ├── sample_data/               #Example input files
 │   │   ├── smallFile.txt
+│   │   ├── generate_large_file.sh #largeFile.txt generator script
 │   │   └── largeFile.txt
 │   └── README.md
 │
