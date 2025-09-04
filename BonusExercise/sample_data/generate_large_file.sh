@@ -11,12 +11,7 @@ mkdir -p "$OUTPUT_DIR"
 
 echo "Generating $OUTPUT_FILE (~461 MB)..."
 
-#Uses /dev/urandom to fill with random numbers 0–99
-#Each number is written as 2 digits + space (≈3 bytes per number)
-bytes_written=0
-while [ $bytes_written -lt $TARGET_SIZE ]; do
-  echo -n "$((RANDOM % 100)) " >> "$OUTPUT_FILE"
-  bytes_written=$(stat -c %s "$OUTPUT_FILE")
-done
+#Use base64 on /dev/urandom, then cut to size
+base64 /dev/urandom | tr -dc '0-9 \n' | head -c "$TARGET_SIZE" > "$OUTPUT_FILE"
 
-echo "Created $(stat -c %s "$OUTPUT_FILE") bytes (~$(du -h "$OUTPUT_FILE" | cut -f1))."
+echo "Done! Created $(stat -c %s "$OUTPUT_FILE") bytes (~$(du -h "$OUTPUT_FILE" | cut -f1))."
