@@ -1,7 +1,7 @@
 # Operating Systems Exercises
 
 This repository contains a collection of exercises completed for the
-**Operating Systems** course at [Harokopio University of Athens – Dept. of Informatics and Telematics](https://www.dit.hua.gr).\
+**Operating Systems** course at [Harokopio University of Athens – Dept. of Informatics and Telematics](https://dit.hua.gr).\
 The exercises are written in **Bash** and **C**, focusing on system
 programming concepts such as shell scripting, process management,
 signals, threads, and file I/O.
